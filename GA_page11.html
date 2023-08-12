@@ -1,0 +1,166 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sheena Soh Rui En
+ Student ID: 22010118
+ Class: C369-2D-E63C-A
+    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanSprouts.com</title>
+</head>
+<style>
+    body {
+        background-color: pink;
+    }
+
+    h1 {
+        color: black;
+        text-decoration: underline;
+    }
+
+    img {
+        width: 100px;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .word-box {
+        border: 2px solid #000;
+        width: 400px;
+        
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .oval {
+        width: 250px;
+        /* Set the width of the oval */
+        height: 70px;
+        /* Set the height of the oval */
+        background-color: white;
+        /* Set the background color of the oval */
+        border-radius: 50%;
+        /* Use a border-radius of 50% to create the oval shape */
+        position: relative;
+        /* Set the positioning context for the pseudo-element */
+        text-align: center;
+        /* Center the text horizontally inside the oval */
+        line-height: 70px;
+        /* Set the line-height to match the height for vertical centering */
+        font-size: 16px;
+        /* Set the font size of the words */
+        color: #333;
+        /* Set the text color */
+    }
+
+    .oval::before {
+        width: 100%;
+        /* Set the width of the pseudo-element to 100% of the oval */
+        height: 100%;
+        /* Set the height of the pseudo-element to 100% of the oval */
+    }
+    .content-box {
+      border: 2px solid #333;
+      width: 30px;
+    }
+  </style>
+
+</style>
+
+<body>
+    <h1>Overseas Transfer<img src="OverseasBankTransfer.png"></h1>
+
+    <div class="container" style="padding-bottom: 50px;">
+        <div class="word-box" style="text-align: center;">
+            <b>Check BeanSprouts Remit Rates</b>
+            <p>Zero fees. Zero delay.</p>
+        </div>
+    </div>
+    <div class="container" style="padding-bottom: 50px;">
+        <div class="word-box" style="text-align: center;">
+            <p>Transfer to</p>
+
+            <select class="word-box" style="width: 230px;">
+                <option value="  " selected></option>
+                <option value="CN">China</option>
+                <option value="JP">Japan</option>
+                <option value="KR">Korea, Republic of Korea</option>
+            </select>
+        </div>
+
+        <div class="word-box" style="text-align: center;">
+            <p>You send</p>
+            <select class="word-box" style="width: 230px;">
+                <option value="  " selected></option>
+                <option value="SG">SGD</option>
+            </select>
+        </div>
+
+        <div class="word-box" style="text-align: center;">
+            <p>Recipient receive</p>
+            <select id = "currency" style="width: 230px; border: 2px solid #000; border: 2px solid #333;">
+                <option value="  " selected></option>
+                <option value="CNY">CNY</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+            </select>
+        </div>
+    </div>
+    <div class="container" style="padding-bottom: 50px;">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            BeanSprouts Remit perks:</p>
+        <p> $0 fees </p>
+        <div class="oval" style="margin-left: 5px;">
+            Same-day transfer
+        </div>
+    </div>
+    <div class="container" style="margin-top: 30px;">
+        <a href="GA_page12.html">
+        <button onclick="transferringAmt()">Make A Transfer</button>
+        </a>
+    </div>
+
+<script>
+    function transferringAmt(){
+        var amt = parseFloat(prompt("Please enter the amount you want to transfer(SGD) > "))
+        var currency = document.getElementById("currency").value 
+        if (isNaN(amt) || amt <= 0){
+            alert("Invalid amount enter again!");
+        }
+        else if(amt > 4000){
+            alert("Error! We are unable to transfer amount more than $4000.");
+        }else{
+            alert("Transfer details: \nCurrency: " + currency + "\nAmount: $" + amt.toFixed(2));
+
+            if (currency === "CNY"){
+                var CNY = amt * 5.37 //Rounded up to 2.d.p
+                alert("You've exchanged " + "$" + amt + " to " + CNY + " CNY. \nExchange Rate: 1 SGD = 5.371027 CNY");
+            }
+            else if (currency === "JPY"){
+                var JPY = amt * 106.24 //Rounded up to 2.d.p
+                alert("You've exchanged " + "$" + amt + " to " + JPY + " JPY. \nExchange Rate: 1 SGD = 106.37415786 JPY");
+            }
+            else if (currency === "KRW"){
+                var KRW = amt * 978.96 //Rounded up to 2.d.p
+                alert("You've exchanged " + "$" + amt + " to " + KRW + " KRW. \nExchange Rate: 1 SGD = 973.818236 KRW");
+            }
+        }
+    }
+</script>
+
+
+
+</body>
+
+</html>

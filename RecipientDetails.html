@@ -1,0 +1,66 @@
+<!--
+ I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sheena Soh Rui En
+ Student ID: 22010118
+ Class: C369-2D-E63C-A
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: pink;
+    }
+    h1{
+        color: black;
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <h1> Enter Recipient's Details </h1>
+    <p>Enter Account Details</p>
+    <form onsubmit="return emptyFilled()" action="GA_page12.html" method="post">
+        <input placeholder="Enter recipient's name" select id = "rn" style="font-weight: bold; color: black; margin-top: 30px;">
+        <div>
+        <input placeholder="Enter account number" select id = "acc" style="font-weight: bold; color: black; ">
+        </div>
+        <div>
+            <select id="selectbank" required>
+                <option value="" disabled selected>Select Bank</option>
+                <option value="DBS/POSB">DBS/POSB</option>
+                <option value="TB">TRUST BANK SINGAPORE LIMITED</option>
+            </select>
+        </div>
+        <div style="padding-top: 50px ;">
+            <button>Make A Transfer</button></a>
+        </div>    
+    </form>
+
+    <script>
+        function emptyFilled() {
+            const firstInput = document.getElementById('rn').value;
+            const secondInput = document.getElementById('acc').value;
+            const thirdInput = document.getElementById('selectbank').value;
+            
+    
+            if (firstInput === ''|| secondInput === ''|| thirdInput === '') {
+                alert('Please ensure every details have been filled');
+                return false; // Prevent form submission
+            }
+    
+            return true; // Allow form submission
+        }
+    </script>
+
+
+</body>
+</html>
+
+

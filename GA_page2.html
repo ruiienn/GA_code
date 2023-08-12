@@ -1,0 +1,79 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sheena Soh Rui En
+ Student ID: 22010118
+ Class: C369-2D-E63C-A 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanSprouts.com</title>
+</head>
+<style>
+    body{
+        background-color: pink;
+    }
+    h1{
+        color: black;
+        text-align: center;
+        text-decoration: underline;
+    }
+    img{
+        width: 200px;
+        height: auto;
+    }
+    p{
+        font-size: 20px;
+    }
+    .image-and-paragraph img{ 
+        float: left;
+        margin-right: 15px;
+    }
+    .image-and-paragraph::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    </style>
+    <body>
+    <div>
+        <h1>Welcome to BeanSprouts internet banking!</h1> 
+        <img src = "Logo.png" style="position: absolute; top: 5px; left: 5px; text-align: left; margin-left: 35px;">
+    </div>
+    <div style="display: grid; grid-template-columns: 500px, 500px; margin-top: 100px;">
+        <div class="image-and-paragraph">
+            <p><span style="color: blue; font-size: 25px;">Local Transfer</p>
+            <img src="LocalBankTransfer.png">
+            <p>It <strong> involves sending money </strong> to a recipient's local bank account through <strong> a network of financial institutions. </strong>
+            An intermediary organisation or financial institution facilitates <u>the transfer by coomunicating between the payer and the recipient.</u></p>
+        </div>
+        <div>
+            <p>Benefit: </p>
+            <p>- It is more convenient to transfer money online as compared to going to a physical ATM machine to transfer the money to another party.</p>
+            <p>- Fast and efficient.</p>
+        </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 500px, 500px;">
+        <div class="image-and-paragraph">
+            <p><span style="color: blue; font-size: 25px;">Overseas Transfer</p>
+            <img src="OverseasBankTransfer.png">
+            <p>The process of <strong> sending money or assets from one country to another.</strong>
+            It involves <u>transferring funds across borders to a recipient in a different country.</u></p>        
+        </div>
+        <div>
+            <p>Benefit: </p>
+            <p>- <strong>Financial Support:</strong> Overseas transfers <u>can provide financial support to individuals in need.</u>
+                For example, someone working abroad can send money back to their own home country to support their family or pay for their own expenses.</p>
+            <p>- <strong>Investment Opportunities:</strong> Overseas transfers <u>can faciliate investments in foreign countries.</u> 
+                Individuals can transfer funds to invest in real estate, stocks, or businesses abroad, potentially accessing new markets and divrsifying their portfolios.</p>
+        </div>
+    </div>
+    <a href="index.html">
+    <button>back</button></a>
+</body>
+</html>

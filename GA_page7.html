@@ -1,0 +1,77 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sheena Soh Rui En
+ Student ID: 22010118
+ Class: C369-2D-E63C-A
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanSprouts.com</title>
+</head>
+<style>
+    body{
+        background-color: pink;
+    }
+    h1{
+        color: black;
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 30px;
+    }
+    .oval {
+        width: 250px; /* Set the width of the oval */
+        height: 70px; /* Set the height of the oval */
+        background-color: white; /* Set the background color of the oval */
+        border-radius: 50%; /* Use a border-radius of 50% to create the oval shape */
+        position: relative; /* Set the positioning context for the pseudo-element */
+        text-align: center; /* Center the text horizontally inside the oval */
+        line-height: 70px; /* Set the line-height to match the height for vertical centering */
+        font-size: 16px; /* Set the font size of the words */
+        color: #333; /* Set the text color */
+        margin-inline: 500px;
+    }
+
+    .oval::before {
+        width: 100%; /* Set the width of the pseudo-element to 100% of the oval */
+        height: 100%; /* Set the height of the pseudo-element to 100% of the oval */
+        top: 0; /* Position at the top of the oval */
+        left: 0; /* Position at the left of the oval */
+    }
+    p{
+        color: black;
+        margin-bottom: 250px;
+        margin-left: 90px;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        width: 255px;
+        height: 150px;
+        margin-left: -150px;
+    }
+</style>
+<body>
+    <h1>Welcome to BeanSprouts internet banking!</h1>
+    <img src = "Logo.png" style="position: absolute; top: 5px; left: 5px; text-align: left; margin-left: 35px;">
+    <div class="oval" style="margin-bottom: 20px; font-weight: bold;">
+        Mode of Transfer
+    </div>
+    
+    <div>
+        <p><a href="GA_page8.html"> Local Transfer</a></p>
+        <img src="LocalBankTransfer.png">
+        <p><a href="GA_page10.html"> Overseas Transfer</a></p>
+        <img src ="OverseasBankTransfer.png">
+    </div>
+
+</body>
+</html>

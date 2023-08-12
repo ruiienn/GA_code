@@ -1,0 +1,94 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sheena Soh Rui En
+ Student ID: 22010118
+ Class: C369-2D-E63C-A
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanSprouts.com</title>
+</head>
+<style>
+    body{
+        background-color: pink;
+    }
+    h1{
+        color: black;
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 50px;
+    }
+    p{
+        color: red;
+    }
+    img{
+        width: 200;
+        height: auto;
+    }
+    input{
+        width: 200px;
+        padding: 5px;
+    }
+    .image-and-paragraph img{ 
+        float: left;
+        margin-right: 15px;
+    }
+    .image-and-paragraph::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    
+</style>
+<body>
+    <h1>Log In</h1>
+    <form onsubmit="return emptyFilled()" action="GA_page7.html" method="post">
+        <label for="name">User:</label>
+        <input type="user" id="user" name="user" required style="margin-left: 31px; margin-bottom: 20px;">
+        <div>
+        <label for="name">Password:</label>
+        <input type="password" id="password" name="password" required >
+        </div>
+
+        <a href = "GA_page7.html"><button style="margin-left: 140px;">Log In</button></a>
+
+    </form>
+    <p style="color:black; margin-left: 200px; font-size: small;">Forget password?</p>
+
+    <script>
+        function emptyFilled() {
+            const userInput = document.getElementById('user').value;
+            const passwordInput = document.getElementById('password').value;
+
+            if (passwordInput === ''){
+                alert('Password field cannot be empty.');
+                return false; // Prevent form submission
+            }
+            // Add additional validation logic if needed
+            // For example, checking password strength, etc.
+            if (userInput === ''){
+                alert('User field cannot be empty.');
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+
+    <div class = "image-and-paragraph">
+        <p style="font-weight: bold;"><u>Log in using Singpass</u></p>
+        <a href = "https://www.singpass.gov.sg/home/ui/login" > <img src = "SingpassQRcode.png"></a>
+    </div>
+
+    
+    <a href="index.html"> <!--going back to the homepage incase wrong option chosed-->
+    <button>back</button></a>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sheena Soh Rui En
+ Student ID: 22010118
+ Class: C369-2D-E63C-A
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanSprouts.com</title>
+</head>
+<style>
+    body{
+        background-color: pink;
+    }
+    h1{
+        color: black;
+        text-decoration: underline;
+    }
+    img{
+        width: 100px;
+        height: auto;
+        padding-top: 20px;
+    }
+    span{
+        margin-right: 500px;
+    }
+    .container{
+        text-align: center;
+    }
+    .word{
+        display: inline-block; /*style is applied to each word to make them appear side by side*/
+        margin: 0 200px; /*Adjusting the margin value as needed*/
+        margin-bottom: 20px;
+    }
+    p{
+        text-decoration: underline;
+        color: blue;
+        font-size: large;
+    }
+    .tick-circle-label {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .tick-circle-checkbox {
+        display: none;
+    }
+
+    .tick-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        margin-top: 4px;
+    }
+
+    .tick-circle::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.2s ease;
+    }
+
+    .tick-circle-checkbox:checked + .tick-circle::after {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .image-with-input {
+        display: flex; /* Use flexbox to create a flexible layout */
+        align-items: center; /* Align items vertically in the center */
+    }
+    .image-with-input input {
+        flex: 1; /* Allow the input boxes to occupy the remaining space */
+        padding: 10px; /* Add padding to the input boxes for better appearance */
+    }
+</style>
+<body>
+    <h1>Local Transfer<img src="LocalBankTransfer.png"></h1>
+
+    <p>Transfer to</p>
+
+    <div class = "container" style="border-bottom-style: dashed;">
+        <span class = "word">Recipients</span>
+        <span class = "word" style="color: blue;"><b>One-Time-Transfer</b></span>
+    </div>
+
+    <div style="padding-bottom: 0px;height: 60px;"> 
+        <label for="tick-circle" class="tick-circle-label"> <!--it is to associate the label with the checkbox input--> <!-- cited from AI [ChatGPT]-->
+            <input type="checkbox" id="tick-circle" class="tick-circle-checkbox"> <!-- cited from AI [ChatGPT]-->
+            <span class="tick-circle"></span>
+        </label>
+        <input placeholder="To other bank" style="font-weight: bold; color: black; margin-top: 30px; margin-left: 6px;">
+    </div>
+    
+    <div style="padding-top: 50px ;">
+        <a href = "RecipientDetails.html" >
+        <button>Next</button></a>
+        <a href="GA_page8.html"> <!--going to the next page once registration is done-->
+        <button>back</button></a>
+    </div>
+</body>
+</html>
+

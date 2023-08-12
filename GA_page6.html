@@ -1,0 +1,104 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sheena Soh Rui En
+ Student ID: 22010118
+ Class: C369-2D-E63C-A
+    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanSprouts.com</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        img {
+            margin-inline: 550px;
+            /*shifting the image to the right or to the left*/
+        }
+
+        div {
+            margin-inline: 280px;
+        }
+
+        input {
+            width: 100px;
+            /*Set the width of the input boxes as needed*/
+            height: 100px;
+            /*Set the height of the input boxes as needed*/
+            border: 1px solid black;
+            /*Adding the border so the boxes can look nicer*/
+            margin-right: 10px;
+            /*Adding space between the boxes*/
+            text-align: center;
+        }
+
+        .input-container {
+            display: flex;
+        }
+
+        p {
+            text-align: center;
+            font-size: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>One-Time-Password [OTP]</h1>
+    <img src="OTP.png">
+
+    <form onsubmit="return emptyFilled()" action="GA_page7.html" method="post">
+        <div class="input-container">
+            <input type="text" id="box1" name="box1">
+            <input type="text" id="box2" name="box2">
+            <input type="text" id="box3" name="box3">
+            <input type="text" id="box4" name="box4">
+            <input type="text" id="box5" name="box5">
+            <input type="text" id="box6" name="box6">
+        </div>
+        <p>Please enter the OTP</p>
+        <br>
+        <p><u>resend(60s)</u></p>
+        <button type="submit">next</button>
+    </form>
+
+    <script>
+        function emptyFilled() {
+            const firstInput = document.getElementById('box1').value;
+            const secondInput = document.getElementById('box2').value;
+            const thirdInput = document.getElementById('box3').value;
+            const fourthInput = document.getElementById('box4').value;
+            const fifthInput = document.getElementById('box5').value;
+            const sixthInput = document.getElementById('box6').value;
+
+            if (firstInput === ''|| secondInput === ''|| thirdInput === '' || fourthInput === ''  || fifthInput === '' || sixthInput === '') {
+                alert('All boxes must be filled.');
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+
+    <script>
+        var message = "DO NOT share your OTP with anyone!!";
+        alert(message);
+    </script>
+
+</body>
+
+</html>
