@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeanSprouts.com</title>
-    
+
 </head>
 <style>
     body{
@@ -58,7 +58,7 @@
         <input type="password" id="password" name="password" required >
         </div>
 
-        <a href = "GA_page7.html"><button style="margin-left: 140px;">Log In</button></a>
+        <button onclick="emptyFilled()" style="margin-left: 140px;">Log In</button>
 
     </form>
     <p style="color:black; margin-left: 200px; font-size: small;">Forget password?</p>
@@ -70,15 +70,15 @@
 
             if (passwordInput === ''){
                 alert('Password field cannot be empty.');
-                return false; // Prevent form submission
+                return;
             }
             // Add additional validation logic if needed
             // For example, checking password strength, etc.
             if (userInput === ''){
                 alert('User field cannot be empty.');
-                return false; // Prevent form submission
+                return;
             }
-            return true; // Allow form submission
+            window.location='GA_page7.html'
         }
     </script>
 
