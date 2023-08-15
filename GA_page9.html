@@ -76,8 +76,10 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        transition: transform 0.2s ease;
+        transform: translate(-50%, -50%) scale(0); /*using this to apply transformations to an element 
+        and using -50% to move the element's position will be shifted. using scale to to scale down the element down to 
+        its original size.*/
+        transition: transform 0.2s ease; /*to ensure the animations between the elements are smooth, it should take around 0.2s to complete*/
     }
 
     .tick-circle-checkbox:checked + .tick-circle::after {
