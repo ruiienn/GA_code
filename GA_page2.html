@@ -31,13 +31,13 @@
         font-size: 20px;
     }
     .image-and-paragraph img{ 
-        float: left;
+        float: left; /*To keep the image on the left*/
         margin-right: 15px;
     }
     .image-and-paragraph::after{
-        content: "";
+        content: ""; 
         display: table;
-        clear: both;
+        clear: both; /*Using this to control the after part of the image on both sides*/
     }
     </style>
     <body>

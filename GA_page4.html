@@ -34,7 +34,7 @@
         }
         .checkbox-container{
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /*Ensure my items are displayed vertically in a column and that it runs */
             align-items: flex-start; /*Aligning the checkboxes and labels to the left*/
         }
     </style>
@@ -111,13 +111,13 @@
                 }if (emailInput === ''){
                     alert('Email address field cannot be empty.');
                     return false; // Prevent form submission
-                }if (mobileInput === ''){
-                    alert('Mobile No. field cannot be empty.');
-                    return false; // Prevent form submission
+                } if (mobileInput === ''){
+                    alert('Mobile No. cannot be empty.')
+                    return false;
+                }
             }
                 
                 return true; // Allow form submission
-        }       
         </script>
 
         <a href="index.html"> <!--going back to the homepage incase wrong option chosed-->
