@@ -79,6 +79,10 @@
                 alert('User field cannot be empty.');
                 return;
             }
+            if(passwordInput.length > 9){
+                alert('Password length cannot be more than 8');
+                return;
+            }
             window.location='GA_page7.html'
         }
     </script>

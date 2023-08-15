@@ -73,7 +73,7 @@
         <p>Please enter the OTP</p>
         <br>
         <p><u>resend(60s)</u></p>
-        <button onclick="window.location.href='GA_page7.html';" type="button">next</button>
+        <button onclick="emptyFilled();" type="button">next</button>
     </form>
 
     <script>
@@ -89,7 +89,7 @@
                 alert('All boxes must be filled.');
                 return false; // Prevent form submission
             }
-
+            window.location.href='GA_page7.html';
             return true; // Allow form submission
         }
     </script>
